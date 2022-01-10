@@ -46,13 +46,32 @@ body{
     
 }
 .cell{
+    
     border: 7px solid #f1f3c2;
-    font-size: 50px;
     cursor: pointer;
     background-color: #94B3FD;
+    position: relative;
     
-   
 }
+
 .cell:hover{
     background-color: #a9c1fa;
+}
+
+#header{
+    display: block;
+}
+
+.X{
+    
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.O{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
