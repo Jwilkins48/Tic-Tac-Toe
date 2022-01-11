@@ -1,20 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Rubik:ital@0;1&display=swap');
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     font-size: 25px;
     letter-spacing: 2px;
-    background-color: #6687F3;
+    background-color: #7090f7;
     overflow: hidden;
+}
+
+#headerContainer{
+    background-color: rgb(105, 136, 238);
+    margin-bottom: 25px;
+    height: 72px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 9px;
 }
 
 .titleHeader {
     text-align: center;
-    color: #FDFFBC;
-    margin-bottom: 40px;
+    color: #f7faa0;
+    margin-bottom: 43px;
+    font-family: 'Rubik', sans-serif;
+}
+
+#gameScore{
+    margin: 40px;
+    text-align: center;
+    font-size: 33px;
+    color: #eef0b7;
+    word-spacing: 2px;
+    font-family: 'Rubik', sans-serif;
+}
+#playerDisplay{
+    font-weight: bold;
+    font-size: 38px;
+    color: #eeabc6;
 }
 
 #resetBtn {
@@ -27,7 +51,7 @@ body {
     background-color: #72da96;
     color: aliceblue;
     font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik', sans-serif;
     cursor: pointer;
 }
 
@@ -40,9 +64,9 @@ body {
     position: relative;
     width: 525px;
     height: 525px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 4px solid #f6f8b0;
+    border: 4px solid #f0f39a;
     border-radius: 7px;
     
 }
@@ -50,7 +74,7 @@ body {
 .cell {
     border: 7px solid #f1f3c2;
     cursor: pointer;
-    background-color: #94B3FD;
+    background-color: #a0bcfd;
     position: relative;
     border-radius: 4px;
 }
@@ -71,7 +95,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2px;
     border-radius: 5px;
-    
 }
 
 .X,
@@ -87,10 +110,3 @@ body {
     -webkit-user-select: none;
 }
 
-.X::after {
-    position: absolute;
-}
-
-.O::after {
-    position: absolute;
-}
