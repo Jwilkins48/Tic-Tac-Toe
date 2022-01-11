@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,33 +11,33 @@ body{
     overflow: hidden;
 }
 
-.titleHeader{
+.titleHeader {
     text-align: center;
     color: #FDFFBC;
     margin-bottom: 40px;
 }
 
-#resetBtn{
+#resetBtn {
     margin: 0 auto;
     display: block;
     width: 140px;
     height: 50px;
     border-radius: 6px;
     border: 1px solid #317549;
-    background-color: #8cecae;
+    background-color: #72da96;
     color: aliceblue;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     cursor: pointer;
 }
-#resetBtn:hover{
+
+#resetBtn:hover {
     background-color: #f1b7ce;
     border: 1px solid #f174a4;
 }
 
-#gameBoardContainer{
-    display: grid;
-    grid-template-columns: repeat(3,auto);
+#gameBoardContainer {
+    position: relative;
     width: 525px;
     height: 525px;
     margin-bottom: 35px;
@@ -45,33 +46,51 @@ body{
     border-radius: 7px;
     
 }
-.cell{
-    
+
+.cell {
     border: 7px solid #f1f3c2;
     cursor: pointer;
     background-color: #94B3FD;
     position: relative;
-    
+    border-radius: 4px;
 }
 
-.cell:hover{
+.cell:hover {
     background-color: #a9c1fa;
 }
 
-#header{
-    display: block;
+.cell-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 3px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    border-radius: 5px;
+    
 }
 
-.X{
-    
+.X,
+.O {
     font-size: 5rem;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-} 
-.O{
-    font-size: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* disable highlight for markers */
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.X::after {
+    position: absolute;
+}
+
+.O::after {
+    position: absolute;
 }
