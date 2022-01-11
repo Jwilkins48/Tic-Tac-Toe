@@ -4,7 +4,7 @@ const cell = document.querySelectorAll('.cell')
 const gameScore = document.getElementById('gameScore');
 const resetBtn = document.getElementById('resetBtn')
 
-let header = document.getElementById('header');
+
 let startingGame = false;
 let gameStatus = 'game starting';
 let winner;
@@ -109,8 +109,12 @@ const GameBoard = (() => {
             gameStatus = 'game over';
         }
         // }
+        
 
     }
+    resetBtn.addEventListener('click', () => {
+        location.reload();
+    })
 
 });
 GameBoard();
